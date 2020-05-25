@@ -6,10 +6,10 @@ setwd("C:/Taller/UOC/Aules/TFM/Exemples/UNET_PPM")
 unlink(list.files(path = "./weights_r/",full.names = TRUE))
 
 # training parameters
-epochs = 100
-batch_size <- 24
+epochs = 30
+batch_size <- 10
 DRAW_SAMPLES = TRUE 
-no_cores = 12
+no_cores = 6
 lr_rate = 0.0001
 
 library(keras)
@@ -26,6 +26,7 @@ set.seed(104)
 
 
 # for reproducibility
+tf<-tf$compat.v1
 tf$set_random_seed(100)
 
 # if it doesnt work change the 1 value
@@ -231,7 +232,7 @@ get_unet_128 <- function(input_shape = c(128, 128, 3),
 }
 
 model <- get_unet_128()
-
+model
 # to use previous trained weights use the function load_model_weights_hdf5
 # for example :
 # load_model_weights_hdf5(model, "./weights_r_save/unet64_178.h5")
@@ -435,8 +436,9 @@ callbacks_list <- list(
                             monitor = "val_custom",
                             save_best_only = FALSE,
                             save_weights_only = TRUE,
-                            mode = "max" ,period =1,save_freq = NULL,)
+                            mode = "max" ,save_freq = TRUE)
 )
+
 
 
 model %>% fit_generator(
