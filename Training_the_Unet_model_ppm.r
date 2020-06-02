@@ -40,8 +40,8 @@ sess <- tf$Session(graph = tf$get_default_graph(), config = session_conf)
 # Parameters -----------------------------------------------------
 
 # directory of the image and object masks
-images_dir <- "./rgb/" 
-masks_dir <- "./masc/"
+images_dir <- "./rgb1/" 
+masks_dir <- "./masc1_b/"
 
 # 
 if (DRAW_SAMPLES) {
