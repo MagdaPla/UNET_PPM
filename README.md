@@ -1,5 +1,5 @@
 # UNET_PPM
-Repositori de formació per la preparació d'un Treball de Final de Màster de Máster en Bioinformàtica i Bioestadística de la UOC.
+Repositori de formació per la preparació d'un Treball de Final de Màster en Bioinformàtica i Bioestadística de la UOC.
 
 La informació d'aquest repositori correspon al codi per a la segmentació per a detectar zones danyades per la processionària del pi en imatges RGB captades des de drons amb Deep Learning, utilitzant el segmentador U-net (Keras i Tensorflow) amb R.
 
